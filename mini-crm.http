@@ -1,0 +1,6 @@
+@mini_crm_HostAddress = http://localhost:5066
+
+GET {{mini_crm_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
