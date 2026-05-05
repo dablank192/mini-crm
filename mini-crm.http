@@ -3,4 +3,11 @@
 GET {{mini_crm_HostAddress}}/weatherforecast/
 Accept: application/json
 
-###
+### User Register
+POST {{mini_crm_HostAddress}}/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "username": "example1",
+    "password": "String@123"
+}

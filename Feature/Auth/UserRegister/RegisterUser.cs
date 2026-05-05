@@ -2,6 +2,7 @@ using System;
 using System.Reflection.Metadata;
 using MediatR;
 using Microsoft.AspNetCore.Http.HttpResults;
+using mini_crm.Exception.AuthException;
 using mini_crm.Infrastructure;
 using mini_crm.Model;
 using mini_crm.Utils;
@@ -40,6 +41,10 @@ public class RegisterUser (
 
     public async Task<Result> Handle (Command req, CancellationToken ct)
     {
+        var validUsername = dbContext.User.FirstOrDefault(t => t.Username == req.Username);
+
+        if (validUsername != null) throw new DuplicateUsernameException(req.Username);
+        
         var hashedPassword = util.PasswordHasher(req.Password);
 
         var newUser = new User
