@@ -5,7 +5,7 @@ namespace mini_crm.Feature.Auth.UserLogin;
 
 public class DataValidation : AbstractValidator<Command>
 {
-    public void Configure()
+    public DataValidation()
     {
         RuleFor(t => t.Username)
         .MaximumLength(20).WithMessage("Username too long (username must has a maximum of 20)")

@@ -13,10 +13,12 @@ namespace mini_crm.Utils;
 public class Util : IUtil
 {
     private readonly IConfiguration _config;
+    private readonly IHttpContextAccessor _httpContext;
 
-    public Util (IConfiguration config)
+    public Util (IConfiguration config, IHttpContextAccessor httpContext)
     {
         _config = config;
+        _httpContext = httpContext;
     }
 
     public string PasswordHasher (string plainPassword)
@@ -62,5 +64,16 @@ public class Util : IUtil
         );
 
         return new JwtSecurityTokenHandler().WriteToken(jwtToken);
+    }
+
+    public int GetUserId ()
+    {
+        var user = _httpContext.HttpContext!.User;
+
+        var userIdString = user.FindFirstValue("UserId");
+
+        var userId = int.Parse(userIdString!);
+
+        return userId;
     }
 }
