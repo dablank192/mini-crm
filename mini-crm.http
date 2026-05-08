@@ -1,5 +1,5 @@
 @mini_crm_HostAddress = http://localhost:5066
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImV4YW1wbGUxIiwiVXNlcklkIjoiMSIsImV4cCI6MTc3ODIzODcyNiwiaXNzIjoibWluaS1jcm0iLCJhdWQiOiJVc2VyIn0.wweR6sysjSv35COZ_rBq2LfiITswHGgYR91W81RuEzE
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImV4YW1wbGUxIiwiVXNlcklkIjoiMSIsImV4cCI6MTc3ODI0NDk2NSwiaXNzIjoibWluaS1jcm0iLCJhdWQiOiJVc2VyIn0.SPtbkuWSJ-uzfe_VQydN885lMs-vvW0QbpRh-tp_Q34
 
 GET {{mini_crm_HostAddress}}/weatherforecast/
 Accept: application/json
@@ -34,3 +34,7 @@ Authorization: Bearer {{token}}
     "phonenumber": "",
     "customertag": null
 }
+
+### Get all customer
+GET {{mini_crm_HostAddress}}/api/v1/customer?PageNumber=1&PageSize=10
+Authorization: Bearer {{token}}
