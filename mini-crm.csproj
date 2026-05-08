@@ -32,6 +32,7 @@
     <Folder Include="Feature\Auth\UserRegister\" />
     <Folder Include="Feature\Customer\" />
     <Folder Include="Feature\Customer\AddCustomer\" />
+    <Folder Include="Feature\Customer\ListAllCustomer\" />
     <Folder Include="Sqlite\" />
     <Folder Include="Dto\" />
     <Folder Include="Infrastructure\" />
