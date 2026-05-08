@@ -1,5 +1,5 @@
 @mini_crm_HostAddress = http://localhost:5066
-@token = 
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImV4YW1wbGUxIiwiVXNlcklkIjoiMSIsImV4cCI6MTc3ODIzODcyNiwiaXNzIjoibWluaS1jcm0iLCJhdWQiOiJVc2VyIn0.wweR6sysjSv35COZ_rBq2LfiITswHGgYR91W81RuEzE
 
 GET {{mini_crm_HostAddress}}/weatherforecast/
 Accept: application/json
@@ -20,4 +20,17 @@ Content-Type: application/json
 {
     "username": "example1",
     "password": "String@123"
+}
+
+###Create Customer
+POST {{mini_crm_HostAddress}}/api/v1/customer/new-customer
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "firstname": "Jane",
+    "lastname": "Doe",
+    "email": "",
+    "phonenumber": "",
+    "customertag": null
 }

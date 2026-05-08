@@ -12,6 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddCarter();
 
 builder.Services.AddMediatR(config =>
@@ -40,8 +42,10 @@ builder.Services.AddAuthentication(option =>
     {
         ValidateIssuerSigningKey= true,
         IssuerSigningKey= new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)),
+        
+        ValidateIssuer= false,
         ValidateAudience= false,
-        ValidateLifetime= false,
+        ValidateLifetime= true,
         ClockSkew= TimeSpan.Zero
     };
 });

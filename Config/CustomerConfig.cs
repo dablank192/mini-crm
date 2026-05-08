@@ -15,14 +15,25 @@ public class CustomerConfig : IEntityTypeConfiguration<Customer>
         builder.Property(t => t.UserId)
         .IsRequired();
 
-        builder.HasIndex(t => t.Name);
-        builder.Property(t => t.Name)
+        builder.HasIndex(t => t.FirstName);
+        builder.Property(t => t.FirstName)
+        .IsRequired()
+        .HasMaxLength(100);
+
+        builder.HasIndex(t => t.LastName);
+        builder.Property(t => t.LastName)
         .IsRequired()
         .HasMaxLength(100);
 
         builder.Property(t => t.Email)
         .IsRequired()
         .HasMaxLength(100);
+
+        builder.Property(t => t.PhoneNumber)
+        .IsRequired(false);
+
+        builder.Property(t => t.CustomerTag)
+        .IsRequired();
 
         builder.HasOne(t => t.User)
         .WithMany(t => t.Customer)

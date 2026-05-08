@@ -9,4 +9,5 @@ public interface IUtil
     public string PasswordHasher (string plainPassword);
     public bool PasswordVerify (string plainPassword, string hashedPassword);
     public string GenerateJwtToken(User user);
+    public int GetUserId ();
 }
