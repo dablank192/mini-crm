@@ -1,5 +1,6 @@
 using System;
 using Carter;
+using mini_crm.Feature.Auth.UserLogin;
 using mini_crm.Feature.Auth.UserRegister;
 
 namespace mini_crm.Feature.Auth;
@@ -13,5 +14,6 @@ public class AuthApi : ICarterModule
 
 
         RegisterUser.MapEndpoint(group);
+        LoginUser.MapEndpoint(group);
     }
 }
