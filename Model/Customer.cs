@@ -18,4 +18,7 @@ public class Customer
 
     public User? User {get; set;}
     public List<ContactLogs>? ContactLogs {get; set;}
+    public ClientDetail? ClientDetail {get; set;}
+    public PartnerDetail? PartnerDetail {get; set;}
+    public VendorDetail? VendorDetail {get; set;}
 }

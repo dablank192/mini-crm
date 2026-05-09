@@ -51,6 +51,7 @@ public class CustomerList (
         .Take(req.PageSize)
         .Select(t => new CustomerDto
         {
+            CustomerId= t.Id,
             FirstName= t.FirstName,
             LastName= t.LastName,
             Email= t.Email,

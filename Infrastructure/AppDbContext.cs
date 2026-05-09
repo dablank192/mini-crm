@@ -12,6 +12,9 @@ public class AppDbContext : DbContext
     public DbSet<User> User {get; set;}
     public DbSet<Customer> Customer {get; set;}
     public DbSet<ContactLogs> ContactLogs {get; set;}
+    public DbSet<ClientDetail> ClientDetail {get; set;}
+    public DbSet<VendorDetail> VendorDetail {get; set;}
+    public DbSet<PartnerDetail> PartnerDetail {get; set;}
 
     public void Configure (ModelBuilder builder)
     {
