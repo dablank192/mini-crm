@@ -1,5 +1,6 @@
 using System;
 using Carter;
+using mini_crm.Feature.Customer.AddClientDetail;
 using mini_crm.Feature.Customer.AddCustomer;
 using mini_crm.Feature.Customer.ListAllCustomer;
 
@@ -15,5 +16,7 @@ public class CustomerApi : ICarterModule
 
         CustomerAdd.MapEndpoint(group);
         CustomerList.MapEndpoint(group);
+
+        ClientDetailAdd.MapEndpoint(group);
     }
 }

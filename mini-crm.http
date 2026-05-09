@@ -1,5 +1,5 @@
 @mini_crm_HostAddress = http://localhost:5066
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImV4YW1wbGUxIiwiVXNlcklkIjoiMSIsImV4cCI6MTc3ODI0NDk2NSwiaXNzIjoibWluaS1jcm0iLCJhdWQiOiJVc2VyIn0.SPtbkuWSJ-uzfe_VQydN885lMs-vvW0QbpRh-tp_Q34
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImV4YW1wbGUxIiwiVXNlcklkIjoiMSIsImV4cCI6MTc3ODMxODg2NywiaXNzIjoibWluaS1jcm0iLCJhdWQiOiJVc2VyIn0.nUnErTd_k61eMburg_f_rio_fi51Ra9j8WVflWFnu50
 
 GET {{mini_crm_HostAddress}}/weatherforecast/
 Accept: application/json
@@ -38,3 +38,14 @@ Authorization: Bearer {{token}}
 ### Get all customer
 GET {{mini_crm_HostAddress}}/api/v1/customer?PageNumber=1&PageSize=10
 Authorization: Bearer {{token}}
+
+### Add Client Detail
+POST {{mini_crm_HostAddress}}/api/v1/customer/a42edb88-8538-4bd8-9e3e-13c7d933802e/client-detail
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "type": 1,
+    "companyname": "",
+    "dateofbirth": "2003-12-19"
+}
