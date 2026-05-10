@@ -1,5 +1,5 @@
 @mini_crm_HostAddress = http://localhost:5066
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImV4YW1wbGUxIiwiVXNlcklkIjoiMSIsImV4cCI6MTc3ODMxODg2NywiaXNzIjoibWluaS1jcm0iLCJhdWQiOiJVc2VyIn0.nUnErTd_k61eMburg_f_rio_fi51Ra9j8WVflWFnu50
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImV4YW1wbGUxIiwiVXNlcklkIjoiMSIsImV4cCI6MTc3ODQzNTgxMywiaXNzIjoibWluaS1jcm0iLCJhdWQiOiJVc2VyIn0.5PUjzamCjKTdiRPFkIQZbvUuyqgQFLGiqSnhwXQqAfQ
 
 GET {{mini_crm_HostAddress}}/weatherforecast/
 Accept: application/json
@@ -48,4 +48,17 @@ Content-Type: application/json
     "type": 1,
     "companyname": "",
     "dateofbirth": "2003-12-19"
+}
+
+### Add Vendor Detail
+POST {{mini_crm_HostAddress}}/api/v1/customer/a42edb88-8538-4bd8-9e3e-13c7d933802e/vendor-detail
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "name": "CompanyA",
+    "TaxIdentifierNumber": "01234567891",
+    "WebsiteUrl": "string123.com",
+    "bankaccountnumber": "0123456789",
+    "bankname": "TCB"
 }

@@ -18,5 +18,6 @@ public class CustomerApi : ICarterModule
         CustomerList.MapEndpoint(group);
 
         ClientDetailAdd.MapEndpoint(group);
+        AddVendor.AddVendor.MapEndpoint(group);
     }
 }
