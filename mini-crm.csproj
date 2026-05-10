@@ -33,6 +33,7 @@
     <Folder Include="Feature\Customer\" />
     <Folder Include="Feature\Customer\AddClientDetail\" />
     <Folder Include="Feature\Customer\AddCustomer\" />
+    <Folder Include="Feature\Customer\AddVendor\" />
     <Folder Include="Feature\Customer\ListAllCustomer\" />
     <Folder Include="Sqlite\" />
     <Folder Include="Dto\" />
