@@ -5,6 +5,7 @@ using mini_crm.Feature.Customer.AddCustomer;
 using mini_crm.Feature.Customer.AddPartner;
 using mini_crm.Feature.Customer.GetCustomerInfo;
 using mini_crm.Feature.Customer.ListAllCustomer;
+using mini_crm.Feature.Customer.UpdateCustomer;
 using mini_crm.Model;
 
 namespace mini_crm.Feature.Customer;
@@ -25,5 +26,6 @@ public class CustomerApi : ICarterModule
         PartnerAdd.MapEndpoint(group);
 
         CustomerInfo.MapEndpoint(group);
+        CustomerUpdate.MapEndpoint(group);
     }
 }

@@ -10,4 +10,8 @@ public class CustomerDto
     public string? Email {get; set;}
     public string? PhoneNumber {get; set;}
     public CustomerCategory? CustomerTag {get; set;}
+<<<<<<< HEAD
+    public DateTime LastUpdated {get; set;}
+=======
+>>>>>>> origin/main
 }

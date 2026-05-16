@@ -56,7 +56,8 @@ public class CustomerList (
             LastName= t.LastName,
             Email= t.Email,
             PhoneNumber= t.PhoneNumber,
-            CustomerTag= t.CustomerTag
+            CustomerTag= t.CustomerTag,
+            LastUpdated= t.UpdatedAt
         })
         .ToListAsync(ct);
 
