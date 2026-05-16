@@ -1,5 +1,5 @@
 @mini_crm_HostAddress = http://localhost:5066
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImV4YW1wbGUxIiwiVXNlcklkIjoiMSIsImV4cCI6MTc3ODgyNDA1MiwiaXNzIjoibWluaS1jcm0iLCJhdWQiOiJVc2VyIn0.T8JjrGMhk7TtN9qtEarYjYcBykLgjHff77j75jPAaZU
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VybmFtZSI6ImV4YW1wbGUxIiwiVXNlcklkIjoiMSIsImV4cCI6MTc3ODk1MjM5MiwiaXNzIjoibWluaS1jcm0iLCJhdWQiOiJVc2VyIn0.CL8e9J0G3Zj0O-j-kmWTGlDvCJPyh_Vi0CJgx8gWATs
 
 GET {{mini_crm_HostAddress}}/weatherforecast/
 Accept: application/json
@@ -75,3 +75,7 @@ Content-Type: application/json
     "ContractEffectiveDate": "2026-05-15",
     "ContractExpiryDate": "2026-06-15"
 }
+
+### Get Customer Info
+GET {{mini_crm_HostAddress}}/api/v1/customer/105ef619-b419-43c5-b478-bdf2b5a6eb55/customer-info
+Authorization: Bearer {{token}}
