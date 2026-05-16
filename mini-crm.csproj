@@ -35,6 +35,7 @@
     <Folder Include="Feature\Customer\AddCustomer\" />
     <Folder Include="Feature\Customer\AddPartner\" />
     <Folder Include="Feature\Customer\AddVendor\" />
+    <Folder Include="Feature\Customer\GetCustomerInfo\" />
     <Folder Include="Feature\Customer\ListAllCustomer\" />
     <Folder Include="Sqlite\" />
     <Folder Include="Dto\" />

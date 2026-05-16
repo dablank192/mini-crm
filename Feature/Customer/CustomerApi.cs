@@ -3,6 +3,7 @@ using Carter;
 using mini_crm.Feature.Customer.AddClientDetail;
 using mini_crm.Feature.Customer.AddCustomer;
 using mini_crm.Feature.Customer.AddPartner;
+using mini_crm.Feature.Customer.GetCustomerInfo;
 using mini_crm.Feature.Customer.ListAllCustomer;
 using mini_crm.Model;
 
@@ -22,5 +23,7 @@ public class CustomerApi : ICarterModule
         ClientDetailAdd.MapEndpoint(group);
         AddVendor.AddVendor.MapEndpoint(group);
         PartnerAdd.MapEndpoint(group);
+
+        CustomerInfo.MapEndpoint(group);
     }
 }
